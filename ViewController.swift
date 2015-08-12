@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var borderLabel: UILabel!
+    
+    @IBOutlet weak var showMessageButton: UIButton!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showMessageButtonPressed(sender: UIButton) {
+        textField.textColor = UIColor.blueColor()
+        textField.textAlignment = NSTextAlignment.Center
+    }
 
 }
 
