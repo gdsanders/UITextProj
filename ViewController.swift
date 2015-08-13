@@ -33,7 +33,25 @@ class ViewController: UIViewController {
     @IBAction func showMessageButtonPressed(sender: UIButton) {
         textField.textColor = UIColor.blueColor()
         textField.textAlignment = NSTextAlignment.Center
+        
+        var currentBorderStyle: String = "Default"
+        
+        if textField.borderStyle == UITextBorderStyle.None {
+            textField.borderStyle = UITextBorderStyle.Line
+            currentBorderStyle = "Line"
+        }
+        else if textField.borderStyle == UITextBorderStyle.Line {
+            textField.borderStyle = UITextBorderStyle.Bezel
+            currentBorderStyle = "Bezel"
+        }
+        else if textField.borderStyle == UITextBorderStyle.Bezel {
+            textField.borderStyle = UITextBorderStyle.RoundedRect
+            currentBorderStyle = "RoundedRect"
+        }
+        else if textField.borderStyle == UITextBorderStyle.RoundedRect {
+            textField.borderStyle = UITextBorderStyle.None
+            currentBorderStyle = "None"
+        }
+   
     }
-
 }
-
