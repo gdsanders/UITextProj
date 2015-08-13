@@ -52,6 +52,9 @@ class ViewController: UIViewController {
             textField.borderStyle = UITextBorderStyle.None
             currentBorderStyle = "None"
         }
+        
+        messageLabel.text = "Hello \(textField.text!). Nice to meet you."
+        borderLabel.text = "Border style: \(currentBorderStyle)."
    
     }
 }
