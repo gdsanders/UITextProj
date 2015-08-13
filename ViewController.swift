@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,4 +58,13 @@ class ViewController: UIViewController {
         borderLabel.text = "Border style: \(currentBorderStyle)."
    
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    
+    
 }
